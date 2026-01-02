@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mutambuze Safaris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fbe7;
+    }
+    header {
+      background: #264d00;
+      color: #fff;
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 2rem;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+      border: 2px solid #264d00;
+      padding: 3px;
+    }
+    .flashing-banner {
+      background: #ffe600;
+      color: #264d00;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      padding: 10px 16px;
+      border-radius: 6px;
+      animation: flash 1s infinite alternate;
+      box-shadow: 1px 2px 5px rgba(0,0,0,0.09);
+    }
+    @keyframes flash {
+      0% { background: #ffe600; color: #264d00; }
+      100% { background: #ff9000; color: #fff; }
+    }
+    nav {
+      margin-right: 2rem;
+    }
+    nav a {
+      color: #ffe600;
+      background: #345900;
+      margin: 0 0.5rem;
+      padding: 7px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.2s;
+      font-weight: 500;
+    }
+    nav a:hover {
+      background: #ffe600;
+      color: #264d00;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: #204201;
+    }
+    section.hotels {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 1px 2px 8px rgba(100,140,0,.07);
+      margin-top: 2rem;
+      padding: 2rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #cee18d;
+      padding: 9px 8px;
+      text-align: left;
+    }
+    th {
+      background: #f3f1bf;
+      color: #264d00;
+    }
+    .upload-logo {
+      margin-top: 2rem;
+      background: #edf7bf;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-banner">
+      <!-- Replace logo.png with your own -->
+      <img src="logo.png" alt="Mutambuze Safaris Logo" class="logo">
+      <div class="flashing-banner">Book Your Safari Adventure Today!</div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to Mutambuze Safaris</h1>
+    <p>
+      Experience the best of tourism with Mutambuze Safaris. Explore wild adventures, beautiful hotels, and memorable experiences in Africa.
+    </p>
+
+    <section id="hotels" class="hotels">
+      <h2>Hotels & Pricing</h2>
+      <table>
+        <tr>
+          <th>Hotel Name</th>
+          <th>Location</th>
+          <th>Price (per night)</th>
+          <th>Book</th>
+        </tr>
+        <tr>
+          <td>Safari Lodge Paradise</td>
+          <td>Kampala</td>
+          <td>$120</td>
+          <td><a href="#">Reserve</a></td>
+        </tr>
+        <tr>
+          <td>River Breeze Resort</td>
+          <td>Jinja</td>
+          <td>$90</td>
+          <td><a href="#">Reserve</a></td>
+        </tr>
+        <tr>
+          <td>Mountain View Hotel</td>
+          <td>Fort Portal</td>
+          <td>$110</td>
+          <td><a href="#">Reserve</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Mutambuze Safaris brings you closer to the heart of Africa's wildlife, offering curated tours, comfortable stays, and unforgettable memories. Whether you want adventure, relaxation, or cultural experiences, we have it all.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: info@mutambuze-safaris.com<br>Phone: +256 780 000 111</p>
+    </section>
+
+    <section class="upload-logo">
+      <h3>Upload Your Logo</h3>
+      <form>
+        <input type="file" accept="image/*" id="logo-upload">
+        <button type="button" onclick="alert('Please upload your logo image as logo.png via your GitHub repo!')">Upload</button>
+      </form>
+      <small>After uploading, rename your file as <b>logo.png</b> in this repository’s root directory to show it on the site.</small>
+    </section>
+  </main>
+</body>
+</html>
